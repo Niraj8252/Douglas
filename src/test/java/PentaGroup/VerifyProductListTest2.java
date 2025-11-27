@@ -4,8 +4,9 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.douglas.genericUtility.BaseClass;
+import com.douglas.objectReposotory.HomePage;
 
-public class VerifyProductListTest extends BaseClass{
+public class VerifyProductListTest2 extends BaseClass{
 	
 	@Test
 	public void verifyProductListTest() throws InterruptedException {
@@ -14,6 +15,7 @@ public class VerifyProductListTest extends BaseClass{
 		String item = excelFileUtility.getDataFromExcelFile("Douglas",3,1 );
 		String headerText = excelFileUtility.getDataFromExcelFile("Douglas",4,1 );
 		String filterText = excelFileUtility.getDataFromExcelFile("Douglas",5,1 );
+		 HomePage homePage = new HomePage(driver);
 		
 		logStep("privacy popup handled and redirected to home page");
 		homePage.clickDeodrantInPerfum(driver);
@@ -42,7 +44,7 @@ public class VerifyProductListTest extends BaseClass{
 //		String item = excelFileUtility.getDataFromExcelFile("Douglas",3,1 );
 //		String headerText = excelFileUtility.getDataFromExcelFile("Douglas",4,1 );
 //		String filterText = excelFileUtility.getDataFromExcelFile("Douglas",5,1 );
-//
+//		
 //		logStep("privacy popup handled and redirected to home page");
 //		homePage.clickDeodrantInPerfum(driver);
 //		logStep("Clicked Deodorant option");

@@ -9,10 +9,35 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">87,616</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">1</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">82,460</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">PentaGroup.VerifyProductListTest</td><td><a href="#m0">verifyProductListTest</a></td><td rowspan="1">1764245585118</td><td rowspan="1">56268</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">PentaGroup.VerifyProductListTest2</td><td><a href="#m0">beforeClassTest</a></td><td rowspan="1">1764260049081</td><td rowspan="1">19</td></tr><tr><th colspan="4">Test &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="3">PentaGroup.VerifyProductListTest2</td><td><a href="#m1">afterClass</a></td><td rowspan="1">1764260049300</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m2">afterMethod</a></td><td rowspan="1">1764260049287</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m3">beforeMethod</a></td><td rowspan="1">1764260049216</td><td rowspan="1">0</td></tr><tr><th colspan="4">Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">PentaGroup.VerifyProductListTest2</td><td><a href="#m4">verifyProductListTest</a></td><td rowspan="1">1764260049226</td><td rowspan="1">1</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">PentaGroup.VerifyProductListTest</td><td><a href="#m5">verifyProductListTest</a></td><td rowspan="1">1764260074008</td><td rowspan="1">56275</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">PentaGroup.VerifyProductListTest#verifyProductListTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">PentaGroup.VerifyProductListTest2#beforeClassTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>chrome</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: Failed to launch browser
+	at com.douglas.genericUtility.BaseClass.beforeClassTest(BaseClass.java:330)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.NullPointerException: Cannot invoke &quot;com.douglas.genericUtility.PropertyFileUtility.getDataFromPropertyFile(String)&quot; because &quot;this.propertyFileUtility&quot; is null
+	at com.douglas.genericUtility.BaseClass.beforeClassTest(BaseClass.java:288)
+	... 16 more
+... Removed 11 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">PentaGroup.VerifyProductListTest2#afterClass</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">PentaGroup.VerifyProductListTest2#afterMethod</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">PentaGroup.VerifyProductListTest2#beforeMethod</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">PentaGroup.VerifyProductListTest2#verifyProductListTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: Failed to launch browser
+	at com.douglas.genericUtility.BaseClass.beforeClassTest(BaseClass.java:330)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.NullPointerException: Cannot invoke &quot;com.douglas.genericUtility.PropertyFileUtility.getDataFromPropertyFile(String)&quot; because &quot;this.propertyFileUtility&quot; is null
+	at com.douglas.genericUtility.BaseClass.beforeClassTest(BaseClass.java:288)
+	... 16 more
+... Removed 11 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">PentaGroup.VerifyProductListTest#verifyProductListTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

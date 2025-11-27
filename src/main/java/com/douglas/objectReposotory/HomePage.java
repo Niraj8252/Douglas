@@ -59,7 +59,7 @@ import com.douglas.genericUtility.WebDriverUtility;
 					perfumeLinkElement.click();
 				}
 				
-				public void clickDeodrantInPerfum() {
+				public void clickDeodrantInPerfum(WebDriver driver) {
 					WebDriverUtility.getInstance().mouseOverOnElement(perfumeLinkElement);
 					deodorantElement.click();
 					

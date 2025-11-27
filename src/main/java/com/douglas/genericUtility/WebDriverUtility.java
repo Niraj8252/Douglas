@@ -24,18 +24,12 @@ package com.douglas.genericUtility;
 		public  Actions action;
 		public JavascriptExecutor javascriptExecutor;
 		public JavaUtility javaUtility = new JavaUtility();
-		
-		
-	private static WebDriverUtility instance;
-		
-		private WebDriverUtility() {
+
+		public WebDriverUtility() {
 			
 		}
 		public static WebDriverUtility getInstance() {
-	        if (instance == null) {
-	            instance = new WebDriverUtility();
-	        }
-	        return instance;
+			return new WebDriverUtility();
 	    }
 		
 		public void config(long longTimeOut, WebDriver driver, String url) {
@@ -43,8 +37,7 @@ package com.douglas.genericUtility;
 			explicitlyWait(driver, longTimeOut);
 			initializeAction(driver);
 			initializeJavaScriptExecutor(driver);
-			navigateApp(url, driver);
-			
+			navigateApp(url, driver);	
 		}
 		
 		/**
@@ -120,8 +113,7 @@ package com.douglas.genericUtility;
 		 * @param index
 		 */
 		public void selectDropdownBox(WebElement element, int index) {
-			 select = new Select( element);
-			select.selectByIndex(index);
+			 new Select(element).selectByIndex(index);
 		}
 		/**
 		 * This method is used to select the dropdown by value
@@ -130,8 +122,7 @@ package com.douglas.genericUtility;
 		 */
 		public void selectDropdownBox(WebElement element,String value)
 		{
-			select=new Select(element);
-			select.selectByValue(value);
+			new Select(element).selectByValue(value);
 		}
 		/**
 		 * This method is used to select the dropdown by visible text
@@ -140,8 +131,7 @@ package com.douglas.genericUtility;
 		 */
 		public void selectDropdownBox(String visibleText,WebElement element)
 		{
-			select=new Select(element);
-			select.selectByVisibleText(visibleText);
+			new Select(element).selectByVisibleText(visibleText);
 		}
 		/**
 		 * This method is used to select dropdown which is made by without select-option tag
@@ -149,8 +139,7 @@ package com.douglas.genericUtility;
 		 * @param text
 		 */
 		public void selectDropDownInList(List<WebElement> listElement, String text) {
-			List<WebElement> list = listElement;		
-			for(WebElement dropDownList:list) {
+			for(WebElement dropDownList:listElement) {
 				if(dropDownList.getText().contains(text)) {
 					dropDownList.click();
 				break;
@@ -311,6 +300,7 @@ package com.douglas.genericUtility;
 		}
 
 	}
+
 
 
 

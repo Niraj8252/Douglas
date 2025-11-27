@@ -1,36 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" parallel="tests" name="Test1(failed)">
+<suite parallel="classes" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="classes" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="PentaGroup.VerifyProductListTest">
+      <class name="PentaGroup.VerifyProductListTest2">
         <methods>
-          <include name="afterSuiteTest"/>
-          <include name="beforeClassTest"/>
           <include name="verifyProductListTest"/>
-          <include name="afterClassTest"/>
-          <include name="afterMethodTest"/>
-          <include name="beforeSuiteTest"/>
-          <include name="beforeMethodTest"/>
-        </methods>
-      </class> <!-- PentaGroup.VerifyProductListTest -->
-    </classes>
-  </test> <!-- Test1(failed) -->
-  <test thread-count="5" parallel="tests" name="Test2(failed)">
-    <parameter name="browser" value="firefox"/>
-    <classes>
-      <class name="PentaGroup.VerifyProductListTest">
-        <methods>
-          <include name="afterSuiteTest"/>
           <include name="beforeClassTest"/>
-          <include name="verifyProductListTest"/>
-          <include name="afterClassTest"/>
           <include name="beforeSuiteTest"/>
-          <include name="afterMethodTest"/>
-          <include name="beforeMethodTest"/>
+          <include name="afterMethod"/>
+          <include name="afterClass"/>
+          <include name="afterSuite"/>
+          <include name="beforeMethod"/>
         </methods>
-      </class> <!-- PentaGroup.VerifyProductListTest -->
+      </class> <!-- PentaGroup.VerifyProductListTest2 -->
     </classes>
-  </test> <!-- Test2(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -25,6 +25,8 @@ import com.aventstack.extentreports.*;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.douglas.objectReposotory.HomePage;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BaseClass {
 
     public WebDriver driver;
@@ -36,7 +38,6 @@ public class BaseClass {
     public JavaUtility javaUtility;
     public ExcelFileUtility excelFileUtility;
     public PropertyFileUtility propertyFileUtility;
-   
 
     // Extent Reports
     public ExtentReports extent;
@@ -73,28 +74,32 @@ public class BaseClass {
 
     @Parameters("browser")
     @BeforeClass
-    public void beforeClassTest(String browser) throws InterruptedException {
+    public void beforeClassTest(/*String browser*/) throws InterruptedException {
 
         try {
             logger.info("Loading configuration...");
 
             String url = propertyFileUtility.getDataFromPropertyFile("url");
             String timeout = propertyFileUtility.getDataFromPropertyFile("Timeout");
-//            String browser = propertyFileUtility.getDataFromPropertyFile("Browser");
+            String browser = propertyFileUtility.getDataFromPropertyFile("Browser");
 
-            longTimeOut = WebDriverUtility.getInstance().javaUtility.stringConvertToLong(timeout);
-            randomNumber = WebDriverUtility.getInstance().javaUtility.generateRandomNum(100);
-            randomString = WebDriverUtility.getInstance().javaUtility.generateRandomString(3);
+            longTimeOut = javaUtility.stringConvertToLong(timeout);
+            randomNumber = javaUtility.generateRandomNum(100);
+            randomString =javaUtility.generateRandomString(3);
 
             switch (browser.toLowerCase()) {
                 case "chrome":
+                	WebDriverManager.chromedriver().setup();
                    driver = new ChromeDriver();
                     break;
                 case "firefox":
+                	WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
                     break;
                 case "edge":
+                	WebDriverManager.edgedriver().setup();
                     driver = new EdgeDriver();
+                	
                     break;
                 default:
                     logger.warn("Invalid browser selected, defaulting to Chrome");
@@ -193,3 +198,4 @@ public class BaseClass {
 	}
 
 }
+

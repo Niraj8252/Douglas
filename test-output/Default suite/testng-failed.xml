@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="PentaGroup.VerifyProductListTest">
+      <class name="PentaGroup.VerifyProductListTest2">
         <methods>
+          <include name="verifyProductListTest"/>
           <include name="afterSuiteTest"/>
           <include name="beforeClassTest"/>
-          <include name="verifyProductListTest"/>
           <include name="afterClassTest"/>
-          <include name="afterMethodTest"/>
           <include name="beforeSuiteTest"/>
+          <include name="afterMethodTest"/>
           <include name="beforeMethodTest"/>
         </methods>
-      </class> <!-- PentaGroup.VerifyProductListTest -->
+      </class> <!-- PentaGroup.VerifyProductListTest2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

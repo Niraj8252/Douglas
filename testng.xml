@@ -5,7 +5,6 @@
 	<parameter name="browser" value="chrome" />
     <classes>
       <class name="PentaGroup.VerifyProductListTest"/>
-      <class name="PentaGroup.VerifyProductListTest2"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

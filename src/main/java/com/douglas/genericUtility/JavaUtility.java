@@ -34,7 +34,7 @@ public class JavaUtility {
 	 * @return
 	 */
 	public String generateRandomString(int limit) {
-		String generatedString =	RandomStringUtils.randomAlphabetic(limit);
+		String generatedString = RandomStringUtils.randomAlphabetic(limit);
 		return generatedString;
 	}
 	

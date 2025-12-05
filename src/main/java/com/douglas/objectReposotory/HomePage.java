@@ -27,7 +27,7 @@ public class HomePage {
 
 
 	//Business library/Methods
-	public void handlePrivacyPopUp(WebDriver driver, long longTimeout) {
+	public void handlePrivacyPopUp(WebDriver driver) {
 
 		WebElement shadowhost = shadowrootElement;
 		SearchContext shadowroot = shadowhost.getShadowRoot();

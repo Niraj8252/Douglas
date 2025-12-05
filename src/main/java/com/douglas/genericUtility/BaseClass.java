@@ -77,8 +77,6 @@ public class BaseClass {
 			String browser = propertyFileUtility.getDataFromPropertyFile("Browser");
 
 			longTimeOut = WebDriverUtility.getInstance().javaUtility.stringConvertToLong(timeout);
-			randomNumber = WebDriverUtility.getInstance().javaUtility.generateRandomNum(100);
-			randomString =WebDriverUtility.getInstance().javaUtility.generateRandomString(3);
 
 			switch (browser.toLowerCase()) {
 			case "chrome":
@@ -110,7 +108,7 @@ public class BaseClass {
 		}
 
 		homePage = new HomePage(driver);
-		homePage.handlePrivacyPopUp(driver, longTimeOut);
+		homePage.handlePrivacyPopUp(driver);
 		logger.info("✔ Privacy popup handled");
 	}
 
